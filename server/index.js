@@ -42,13 +42,7 @@ app.post("/api/student", (req, res) => {
   }
 });
 
-app.get("/api/function", (req, res) => {
-  try {
-    fakeFunction();
-  } catch (err) {
-    rollbar.error(err);
-  }
-});
+//app.get("/api/function", (req, res) => {});
 //fakeFunction();
 
 const port = process.env.PORT || 4545;

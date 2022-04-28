@@ -19,12 +19,11 @@
       const addForm = document.querySelector("form");
       const nameInput = document.querySelector("input");
       const container = document.querySelector("section");
-        const fakeFunction = () => {
-            axios.get('/api/function').then((res) => {
-                console.log(res.data)
-            }).catch(err => {console.log(err)})
+        try {
+            fakeFunction();
+        } catch(e) {
+            Rollbar.error('something went wrong',e)
         }
-        fakeFunction();
       function submitHandler(e) {
         e.preventDefault();
         axios
