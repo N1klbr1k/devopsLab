@@ -42,6 +42,14 @@ app.post("/api/student", (req, res) => {
   }
 });
 
+app.get("/api/function", (req, res) => {
+  try {
+    fakeFunction();
+  } catch (err) {
+    rollbar.error(err);
+  }
+});
+
 const port = process.env.PORT || 4545;
 
 // rolly
