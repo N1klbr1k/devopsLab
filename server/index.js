@@ -16,6 +16,7 @@ rollbar.log("Hello world!");
 
 app.get("/", (req, res) => {
   res.sendfile(path.join(__dirname, "../index.html"));
+  rollbar.log("initial endpoint hit");
 });
 
 const port = process.env.PORT || 5005;
