@@ -49,7 +49,7 @@ app.get("/api/function", (req, res) => {
     rollbar.error(err);
   }
 });
-fakeFunction();
+//fakeFunction();
 
 const port = process.env.PORT || 4545;
 
